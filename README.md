@@ -40,7 +40,7 @@ The Read Control block is crucial for balancing performance and power efficiency
 
 
 ### 6T-SRAM Read Operation
-file:///home/nfs2/vlab17/Downloads/new.jpg![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0062879a-769d-4151-82b7-bde10c05fc71)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0062879a-769d-4151-82b7-bde10c05fc71)
 
 The above circuit show the read circuit of SRAM 
 
