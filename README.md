@@ -34,15 +34,18 @@ Responsible for overseeing read operations, assisting in the retrieval of data f
 Takes the memory address as input and decodes it to select the appropriate row and column in the memory array.
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
-
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 #Schematic of Read Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/193c065e-bbe3-466a-a7ef-266fbdaa9f53)
 
+
 #Graphically
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
+
 #Schematic of Write Operation
+file:///home/nfs2/vlab17/Pictures/write.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/859feb46-b901-41d5-9aee-8226124ca97f)
+
 
 #Graphically
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/71c4403f-6d80-4ff1-8cfb-2a964c1677aa)
