@@ -56,10 +56,7 @@ The above circuit show the read circuit of SRAM
 
 
 ### Write Operation
-file:///home/nfs2/vlab17/Pictures/write.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/859feb46-b901-41d5-9aee-8226124ca97f)
-
-
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/71c4403f-6d80-4ff1-8cfb-2a964c1677aa)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fc09d792-e085-49cd-b1ce-6a7094918dff)
 
 ### Precharge circuit of SRAM block
 
