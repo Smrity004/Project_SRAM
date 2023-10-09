@@ -36,6 +36,7 @@ Takes the memory address as input and decodes it to select the appropriate row a
 ## DESIGN DISCRIPTION
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
+
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 
 ### DC response of invertor
