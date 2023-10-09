@@ -11,9 +11,9 @@ It helps your devices work quickly and efficiently by storing and retrieving inf
 It's commonly used in things like your computer's CPU to make it faster, and it's also used in various other electronic gadgets to speed up their operations.
 
 
+# Block diagram
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
-# Block diagram
 ![block_sram](https://github.com/Smrity004/Project_SRAM/assets/102158117/8cb663fd-c1fe-4a52-8d76-fa82e20454a7)
 
 Let's break down the block diagram of your 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications into individual blocks, each described in a separate sentence.
@@ -40,6 +40,7 @@ The Read Control block is crucial for balancing performance and power efficiency
 
 ### DC response of invertor
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/35d5b121-85e9-47e0-871a-dd1e40a98413)
+
 The above graph shows DC response of invertor.
 The DC response of an inverter involves the conversion of direct current (DC) power from sources like batteries or solar panels into alternating current (AC) electricity. This process relies on electronic components to rapidly switch the DC voltage, creating a clean and stable AC waveform suitable for powering household appliances and devices. Inverters can be adjusted to provide specific AC voltage and frequency outputs and aim for high efficiency while maintaining the quality of the AC power generated. This transformation is crucial for making DC power sources compatible with the electrical grid and various consumer electronics.
 The graph of an inverter's DC response typically shows a horizontal line representing the constant input DC voltage. When the inverter is active, there will be a corresponding AC waveform with varying voltage and frequency, typically represented as a sine wave on the graph. The key aspect is the conversion from a steady DC input to an oscillating AC output, which can vary in terms of voltage and frequency based on the inverter's design
@@ -49,8 +50,6 @@ The graph of an inverter's DC response typically shows a horizontal line represe
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0062879a-769d-4151-82b7-bde10c05fc71)
 
 The above circuit show the read circuit of SRAM
-
-
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
@@ -62,13 +61,15 @@ The above circuit show the read circuit of SRAM
 
 Firstly, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
 Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in the precharge circuit to establish a stable voltage reference point, typically at the midpoint between logic high and low. NMOS transistors, known for their fast switching speed, are reserved for read and write access operations, as they excel in rapidly changing the state of the SRAM cell.
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/2bc39496-04bc-4dc1-98d7-3e48246a34be)
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/b6aab5e7-48f8-4e77-aef3-a7b36bd05724)
 
 In SRAM, the precharge operation is a vital step that readies the memory cell for data storage and retrieval. During precharge, the bitlines are reset to a stable voltage level, typically the midpoint between logic high and low, ensuring a known starting point for subsequent read and write operations. This step equalizes the SRAM cell's nodes, minimizes noise, and optimizes speed, enhancing the reliability and efficiency of data access in this type of memory.
 
 ### Sense Amplifier
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/2bc39496-04bc-4dc1-98d7-3e48246a34be)
+
 
 
 
