@@ -33,15 +33,15 @@ Responsible for overseeing read operations, assisting in the retrieval of data f
 **Address Decoder:**
 Takes the memory address as input and decodes it to select the appropriate row and column in the memory array.
 
-**# DESIGN DISCRIPTION**
+## DESIGN DISCRIPTION
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 
 
-**Read Operation**
+### 6T-SRAM Read Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/193c065e-bbe3-466a-a7ef-266fbdaa9f53)
-The above circuit show the read circuit of SRAM
+The above circuit show the read circuit of SRAM 
 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
