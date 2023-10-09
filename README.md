@@ -63,6 +63,13 @@ file:///home/nfs2/vlab17/Pictures/write.png![image](https://github.com/Smrity004
 Firstly, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
 Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in the precharge circuit to establish a stable voltage reference point, typically at the midpoint between logic high and low. NMOS transistors, known for their fast switching speed, are reserved for read and write access operations, as they excel in rapidly changing the state of the SRAM cell.
 
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/b6aab5e7-48f8-4e77-aef3-a7b36bd05724)
+
+In SRAM, the precharge operation is a vital step that readies the memory cell for data storage and retrieval. During precharge, the bitlines are reset to a stable voltage level, typically the midpoint between logic high and low, ensuring a known starting point for subsequent read and write operations. This step equalizes the SRAM cell's nodes, minimizes noise, and optimizes speed, enhancing the reliability and efficiency of data access in this type of memory.
+
+### Sense Amplifier
+
+
 
 
 
