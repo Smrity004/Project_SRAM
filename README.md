@@ -59,8 +59,11 @@ The above circuit show the read circuit of SRAM
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fc09d792-e085-49cd-b1ce-6a7094918dff)
 
 ### Precharge circuit of SRAM block
+**Firstly**, the question arrises why we predischarge why not predischarge.
+Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as data instability, reduced noise immunity, increased complexity, slower operation, higher power consumption, and incompatibility with established circuit designs.
+On the otherhand precharging is the preferred method in SRAM because it provides a stable starting point for memory cells, ensuring data integrity, reliable write and read operations, noise immunity, and overall robust performance.
 
-Firstly, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
+**Secondly**, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
 Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in the precharge circuit to establish a stable voltage reference point, typically at the midpoint between logic high and low. NMOS transistors, known for their fast switching speed, are reserved for read and write access operations, as they excel in rapidly changing the state of the SRAM cell.
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/b6aab5e7-48f8-4e77-aef3-a7b36bd05724)
