@@ -13,7 +13,7 @@ It's commonly used in things like your computer's CPU to make it faster, and it'
 
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
-#Block diagram
+# Block diagram
 ![block_sram](https://github.com/Smrity004/Project_SRAM/assets/102158117/8cb663fd-c1fe-4a52-8d76-fa82e20454a7)
 
 Let's break down the block diagram of your 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications into individual blocks, each described in a separate sentence.
@@ -33,7 +33,7 @@ Responsible for overseeing read operations, assisting in the retrieval of data f
 **Address Decoder:**
 Takes the memory address as input and decodes it to select the appropriate row and column in the memory array.
 
-**DESIGN DISCRIPTION**
+**# DESIGN DISCRIPTION**
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
