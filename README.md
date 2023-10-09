@@ -38,11 +38,15 @@ Takes the memory address as input and decodes it to select the appropriate row a
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 
+### DC response of invertor
+file:///home/nfs2/vlab17/Pictures/dc.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/35d5b121-85e9-47e0-871a-dd1e40a98413)
+The above graph shows DC response of invertor.
 
 ### 6T-SRAM Read Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0062879a-769d-4151-82b7-bde10c05fc71)
 
-The above circuit show the read circuit of SRAM 
+The above circuit show the read circuit of SRAM
+
 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
@@ -52,8 +56,15 @@ The above circuit show the read circuit of SRAM
 file:///home/nfs2/vlab17/Pictures/write.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/859feb46-b901-41d5-9aee-8226124ca97f)
 
 
-#Graphically
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/71c4403f-6d80-4ff1-8cfb-2a964c1677aa)
+
+### Precharge circuit of SRAM block
+
+Firstly, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
+Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in the precharge circuit to establish a stable voltage reference point, typically at the midpoint between logic high and low. NMOS transistors, known for their fast switching speed, are reserved for read and write access operations, as they excel in rapidly changing the state of the SRAM cell.
+
+
+
 
 
 
