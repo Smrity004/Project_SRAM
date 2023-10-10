@@ -26,6 +26,13 @@ Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) design
 
 ![block_sram](https://github.com/Smrity004/Project_SRAM/assets/102158117/8cb663fd-c1fe-4a52-8d76-fa82e20454a7)
 
+The above figure shows the 16x8 SRAM architecture refers to a specific organization of SRAM cells in an array. 
+**16 Rows**: This part of the architecture indicates that there are 16 rows of SRAM cells in the memory array. Each row consists of a set of SRAM cells that store data. Rows are often referred to as wordlines (WLs) in SRAM design.
+**8 Columns**: The "8" in the architecture tells us that there are 8 columns of SRAM cells in the array. Each column is associated with a pair of bitlines: a bitline (BL) and its complement (BLB). These bitlines are used for reading and writing data to and from the SRAM cells.
+
+So, in a 16x8 SRAM architecture, you have a grid-like structure with 16 rows and 8 columns of SRAM cells. Each SRAM cell is at the intersection of a row and a column, and they collectively make up the memory array. This organization allows for the storage and retrieval of data in a structured and addressable manner.
+
+Now,
 Let's break down the block diagram of your 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications into individual blocks, each described in a separate sentence.
 **Short description of each block in a typical SRAM**
 
