@@ -160,7 +160,7 @@ The decoder makes sure you get to the right place in the memory every time you w
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e164d1d0-088f-4de1-9917-c158eba53246)
 
 #### Corner Analysis
-//adl
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/cf82f577-da32-414d-a281-aae4e7ce18db)
 
 
