@@ -44,6 +44,11 @@ Responsible for overseeing read operations, assisting in the retrieval of data f
 **5. Address Decoder:**
 Takes the memory address as input and decodes it to select the appropriate row and column in the memory array.
 
+Here, the block of my SRAM Project.
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a5fc4363-b678-40bb-9201-3967325e63ab)
+
+
 ## DESIGN DISCRIPTION
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
@@ -149,6 +154,14 @@ The decoder makes sure you get to the right place in the memory every time you w
 ###### TOP Testbench
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3d3b4684-c21b-4739-9a0b-1170c6878278)
+
+## Conclusion
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e164d1d0-088f-4de1-9917-c158eba53246)
+
+#### Corner Analysis
+//adl
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/cf82f577-da32-414d-a281-aae4e7ce18db)
 
 
 
