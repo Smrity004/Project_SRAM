@@ -69,12 +69,30 @@ The above graph shows DC response of invertor.
 The DC response of an inverter involves the conversion of direct current (DC) power from sources like batteries or solar panels into alternating current (AC) electricity. This process relies on electronic components to rapidly switch the DC voltage, creating a clean and stable AC waveform suitable for powering household appliances and devices. Inverters can be adjusted to provide specific AC voltage and frequency outputs and aim for high efficiency while maintaining the quality of the AC power generated. This transformation is crucial for making DC power sources compatible with the electrical grid and various consumer electronics.
 The graph of an inverter's DC response typically shows a horizontal line representing the constant input DC voltage. When the inverter is active, there will be a corresponding AC waveform with varying voltage and frequency, typically represented as a sine wave on the graph. The key aspect is the conversion from a steady DC input to an oscillating AC output, which can vary in terms of voltage and frequency based on the inverter's design
 
+### Transister Sizing in SRAM
+The below expression show how I have dicided the sizing of SRAM,
 
-### 6T-SRAM Read Operation
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0062879a-769d-4151-82b7-bde10c05fc71)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/04cda667-fa25-46d8-b14b-070da1c5bc95)
 
-The above circuit show the read circuit of SRAM
 
+Let voltage at node C1=0.3 (0.3 is the stable voltage so that tr T2 not grt ON)
+Then
+T1= ON(**Saturation**)
+and T5(**Liner region**)
+
+I4(sat)=I1(lin)
+
+
+
+
+
+
+## 6T-SRAM
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6eb63480-4436-4701-b81d-f2636d98bf22)
+
+The above circuit show the read circuit of SRAM.
+
+### Read Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
 
