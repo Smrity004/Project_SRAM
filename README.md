@@ -81,6 +81,8 @@ T1= ON(**Saturation**)
 and T5(**Liner region**)
 
 I4(sat)=I1(lin)
+$I_D = K_p \left(2(V_{cs} \cdot V_{TN})V_{DS} - V\right)$
+
 
 
 
@@ -93,11 +95,24 @@ I4(sat)=I1(lin)
 The above circuit show the read circuit of SRAM.
 
 ### Read Operation
+
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
 
 ### Write Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fc09d792-e085-49cd-b1ce-6a7094918dff)
+
+"When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
+
+In the circuit, we use special transistors called nMOS transistors, specifically M1 and M2, to bring down the voltage in the memory cells. There's also another transistor, M3, which completes the connection to the ground. Importantly, M3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
+
+The transistors that bring down the voltage in the memory cells (M1 and M2) need to be big enough (meaning they have a sufficiently large size) to ensure the voltage gets very close to 0 V during a 'write' operation.
+
+The 'write' operation is controlled by signals. One signal, called 'write-enable,' tells the circuit when it's time to write data. The actual data we want to write is called 'DATA.' Together, these signals create the control signals that determine when and where the write operation happens.
+
+The input circuitry, which processes the data to be written, can be shared among multiple memory cells, as long as only one cell is active or selected at any given moment. This ensures that we write the correct data to the intended location in memory."
+
 
 ### Precharge circuit of SRAM block
 **Firstly**, the question arrises why we predischarge why not predischarge.
@@ -157,6 +172,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
 
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ce99a59-2680-4768-b960-59d54546bb32)
 
 ###### Decoder block
 
