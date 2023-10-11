@@ -112,6 +112,7 @@ The transistors that bring down the voltage in the memory cells (M1 and M2) need
 The 'write' operation is controlled by signals. One signal, called 'write-enable,' tells the circuit when it's time to write data. The actual data we want to write is called 'DATA.' Together, these signals create the control signals that determine when and where the write operation happens.
 
 The input circuitry, which processes the data to be written, can be shared among multiple memory cells, as long as only one cell is active or selected at any given moment. This ensures that we write the correct data to the intended location in memory."
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
 
 ### Precharge circuit of SRAM block
