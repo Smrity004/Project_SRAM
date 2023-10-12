@@ -209,7 +209,8 @@ The decoder makes sure you get to the right place in the memory every time you w
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fac0b5be-a8e8-4add-a433-ad6fb9da9a30)
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/f4bbfcd7-e742-4261-8f1f-e41feede27f7)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/c621db45-a755-49d1-b85b-ba83cd254500)
+
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/8b4a070e-a4a1-4fbe-b2ec-381b10bd5028)
 
