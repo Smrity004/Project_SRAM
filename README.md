@@ -83,10 +83,10 @@ and T5(**Liner region**)
 I4(sat)=I1(lin)
 $I_D = K_p \left(2(V_{cs} \cdot V_{TN})V_{DS} - V\right)$
 
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6fe609c9-b08e-4e5e-8c5e-8c58a60f7c61)
 
 
-
-
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/5317ffad-0398-4e74-baa5-1cfa7906c3de)
 
 
 ## 6T-SRAM
