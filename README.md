@@ -1,4 +1,3 @@
-# Project_SRAM
 # Table of Content
 - [Introduction](#introduction)
 - [Block Diagram](#block-diagram)
@@ -80,13 +79,14 @@ Then
 T1= ON(**Saturation**)
 and T5(**Liner region**)
 
-I4(sat)=I1(lin)
-$I_D = K_p \left(2(V_{cs} \cdot V_{TN})V_{DS} - V\right)$
+ **I4(sat)=I1(lin)**
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6fe609c9-b08e-4e5e-8c5e-8c58a60f7c61)
 
+**Sizing of Transister T3 and T5**
+**I3(sat)=I5(lin)**
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/5317ffad-0398-4e74-baa5-1cfa7906c3de)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/81256201-d08f-4241-8a46-45ffa8637d05)
 
 
 ## 6T-SRAM
@@ -204,6 +204,15 @@ The decoder makes sure you get to the right place in the memory every time you w
 #### Corner Analysis
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/cf82f577-da32-414d-a281-aae4e7ce18db)
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9b65fe02-286d-4dff-b7f3-f1793a955373)
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fac0b5be-a8e8-4add-a433-ad6fb9da9a30)
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/f4bbfcd7-e742-4261-8f1f-e41feede27f7)
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/8b4a070e-a4a1-4fbe-b2ec-381b10bd5028)
+
 
 
 
