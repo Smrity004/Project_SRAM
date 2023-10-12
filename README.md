@@ -26,7 +26,9 @@ Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) design
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a5fc4363-b678-40bb-9201-3967325e63ab)
 
 The above figure shows the 16x8 SRAM architecture refers to a specific organization of SRAM cells in an array. 
+
 **16 Rows**: This part of the architecture indicates that there are 16 rows of SRAM cells in the memory array. Each row consists of a set of SRAM cells that store data. Rows are often referred to as wordlines (WLs) in SRAM design.
+
 **8 Columns**: The "8" in the architecture tells us that there are 8 columns of SRAM cells in the array. Each column is associated with a pair of bitlines: a bitline (BL) and its complement (BLB). These bitlines are used for reading and writing data to and from the SRAM cells.
 
 So, in a 16x8 SRAM architecture, you have a grid-like structure with 16 rows and 8 columns of SRAM cells. Each SRAM cell is at the intersection of a row and a column, and they collectively make up the memory array. This organization allows for the storage and retrieval of data in a structured and addressable manner.
@@ -84,12 +86,14 @@ and T5(**Liner region**)
 
  **I4(sat)=I1(lin)**
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6fe609c9-b08e-4e5e-8c5e-8c58a60f7c61)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/7f965590-628f-4ace-9445-25ed4e5ebfdd)
+
 
 Sizing of Transister T3 and T5
 **I3(sat)=I5(lin)**
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/81256201-d08f-4241-8a46-45ffa8637d05)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e359ac41-51b7-4d1a-aac5-7b0cbeda43f0)
+
 
 ## Read Operation
 
