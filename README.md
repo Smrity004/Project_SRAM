@@ -23,7 +23,7 @@ It's commonly used in things like your computer's CPU to make it faster, and it'
 ## Block Diagram
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
-![block_sram](https://github.com/Smrity004/Project_SRAM/assets/102158117/8cb663fd-c1fe-4a52-8d76-fa82e20454a7)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a5fc4363-b678-40bb-9201-3967325e63ab)
 
 The above figure shows the 16x8 SRAM architecture refers to a specific organization of SRAM cells in an array. 
 **16 Rows**: This part of the architecture indicates that there are 16 rows of SRAM cells in the memory array. Each row consists of a set of SRAM cells that store data. Rows are often referred to as wordlines (WLs) in SRAM design.
@@ -33,6 +33,8 @@ So, in a 16x8 SRAM architecture, you have a grid-like structure with 16 rows and
 
 Now,
 Let's break down the block diagram of your 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications into individual blocks, each described in a separate sentence.
+
+
 **Short description of each block in a typical SRAM**
 
 **1. Wordline Decoder:**
@@ -52,7 +54,7 @@ Takes the memory address as input and decodes it to select the appropriate row a
 
 Here, the block of my SRAM Project.
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a5fc4363-b678-40bb-9201-3967325e63ab)
+
 
 
 ## DESIGN DISCRIPTION
@@ -61,14 +63,15 @@ Here, the block of my SRAM Project.
 
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 
-### DC response of invertor
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/35d5b121-85e9-47e0-871a-dd1e40a98413)
 
-The above graph shows DC response of invertor.
-The DC response of an inverter involves the conversion of direct current (DC) power from sources like batteries or solar panels into alternating current (AC) electricity. This process relies on electronic components to rapidly switch the DC voltage, creating a clean and stable AC waveform suitable for powering household appliances and devices. Inverters can be adjusted to provide specific AC voltage and frequency outputs and aim for high efficiency while maintaining the quality of the AC power generated. This transformation is crucial for making DC power sources compatible with the electrical grid and various consumer electronics.
-The graph of an inverter's DC response typically shows a horizontal line representing the constant input DC voltage. When the inverter is active, there will be a corresponding AC waveform with varying voltage and frequency, typically represented as a sine wave on the graph. The key aspect is the conversion from a steady DC input to an oscillating AC output, which can vary in terms of voltage and frequency based on the inverter's design
+## 6T-SRAM
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6eb63480-4436-4701-b81d-f2636d98bf22)
+
+The above circuit show the read circuit of SRAM.
+
 
 ### Transister Sizing in SRAM
+
 The below expression show how I have dicided the sizing of SRAM,
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/04cda667-fa25-46d8-b14b-070da1c5bc95)
@@ -83,24 +86,17 @@ and T5(**Liner region**)
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6fe609c9-b08e-4e5e-8c5e-8c58a60f7c61)
 
-**Sizing of Transister T3 and T5**
+Sizing of Transister T3 and T5
 **I3(sat)=I5(lin)**
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/81256201-d08f-4241-8a46-45ffa8637d05)
 
-
-## 6T-SRAM
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6eb63480-4436-4701-b81d-f2636d98bf22)
-
-The above circuit show the read circuit of SRAM.
-
-### Read Operation
-
+## Read Operation
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
 
-### Write Operation
+## Write Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fc09d792-e085-49cd-b1ce-6a7094918dff)
 
 "When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
@@ -115,7 +111,7 @@ The input circuitry, which processes the data to be written, can be shared among
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
 
-### Precharge circuit of SRAM block
+## Precharge circuit of SRAM block
 **Firstly**, the question arrises why we predischarge why not predischarge.
 Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as data instability, reduced noise immunity, increased complexity, slower operation, higher power consumption, and incompatibility with established circuit designs.
 On the otherhand precharging is the preferred method in SRAM because it provides a stable starting point for memory cells, ensuring data integrity, reliable write and read operations, noise immunity, and overall robust performance.
@@ -127,12 +123,12 @@ Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in 
 
 In SRAM, the precharge operation is a vital step that readies the memory cell for data storage and retrieval. During precharge, the bitlines are reset to a stable voltage level, typically the midpoint between logic high and low, ensuring a known starting point for subsequent read and write operations. This step equalizes the SRAM cell's nodes, minimizes noise, and optimizes speed, enhancing the reliability and efficiency of data access in this type of memory.
 
-### Sense Amplifier
+## Sense Amplifier
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/2bc39496-04bc-4dc1-98d7-3e48246a34be)
 
 
-**Write enable(WR)**
+## Write enable(WR)
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
 In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WE) control.
@@ -143,26 +139,26 @@ Here's a simplified circuit diagram for a basic SRAM cell with a write enable (W
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/659c78c4-3deb-4aa0-b4a7-e3fb8642ce9f)
 
 
-#### Hand to hand design in Cadence
+# Hand to hand design in Cadence
 
 Let's provide a brief description of each block in SRAM architecture in more simplified terms, as if you were designing it by hand:
 When working on a bottom-to-top design approach for an SRAM circuit in Cadence, it means starting with the smallest and most fundamental building blocks and progressively integrating them into a complete system. Here's how you can approach this process:
 Starting from scratch, designing an SRAM block involves a systematic approach to create a reliable and efficient memory unit. Here's a step-by-step explanation of how you might begin and why each step is necessary:
 
-###### Precharge circuit: 
+## Precharge circuit: 
 
 The precharge circuit in an SRAM cell is responsible for ensuring that the bitlines (BL and BLB) are precharged to a certain voltage level before a read or write operation. Precharging is essential to establish a known starting point and to facilitate the accurate reading and writing of data. Let's explore how the precharge circuit precharges an 16x8 SRAM cell array.
 
 file:///home/nfs2/vlab17/Pictures/pc%3C7:0%3E.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
 
-###### Sense Amplifier: 
+## Sense Amplifier: 
 
 A sense amplifier in a 16x8 SRAM cell array is crucial for accurately detecting and amplifying the voltage differences on the bitlines (BL and BLB) during a read operation. In a 16x8 SRAM cell array, there are 16 rows and 8 columns of SRAM cells. Each SRAM cell has its own bitlines (BL and BLB), and the sense amplifier is used to read the data stored in a specific cell by sensing the voltage difference between these bitlines.
 The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading the data stored in SRAM cells accurately. It detects small voltage differences on the bitlines, amplifies them, and provides a clear and stable output that represents the stored logic state. This operation ensures reliable data access in the SRAM memory array.
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/74c22f23-b053-46b8-8f40-506d7a0cb0db)
 
-###### Write enable(wr):
+## Write enable(wr):
 
 In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable (WE).
 
@@ -175,7 +171,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ce99a59-2680-4768-b960-59d54546bb32)
 
-###### Decoder block
+## Decoder block
 
 In a 16x8 SRAM memory, the decoder acts like a "traffic cop." When you want to find or change information stored in a specific part of the memory, you provide an address. The decoder takes that address and figures out exactly which spot in the memory grid you're talking about – which row and which column. It then turns on the right "roads" (wordlines and bitlines) to reach that spot.
 Once there, you can either read what's already there or put new information in. 
@@ -185,34 +181,37 @@ The decoder makes sure you get to the right place in the memory every time you w
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee13df4-bc78-4143-ad9a-78b83bbbf0f9)
 
 
-###### Sense Amplifier
+## Sense Amplifier
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3a01ed73-df22-4cd9-a0ac-e527e40ef4da)
 
-###### Systematic 
+## Systematic 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a2907d0b-c15c-4ba2-bca8-2df955775a7b)
 
-###### TOP Testbench
+## TOP Testbench
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3d3b4684-c21b-4739-9a0b-1170c6878278)
 
-## Conclusion
+# Conclusion
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e164d1d0-088f-4de1-9917-c158eba53246)
 
-#### Corner Analysis
+# Corner Analysis
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/cf82f577-da32-414d-a281-aae4e7ce18db)
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9b65fe02-286d-4dff-b7f3-f1793a955373)
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/fac0b5be-a8e8-4add-a433-ad6fb9da9a30)
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/24653116-6356-41c4-8a25-500914c07aa6)
+
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/c621db45-a755-49d1-b85b-ba83cd254500)
 
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/8b4a070e-a4a1-4fbe-b2ec-381b10bd5028)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ebe102f-ecfe-43d5-883d-188a0fac2fde)
+
 
 
 
