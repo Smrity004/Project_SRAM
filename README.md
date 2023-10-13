@@ -181,12 +181,8 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 
 ## Sense Amplifier
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/2bc39496-04bc-4dc1-98d7-3e48246a34be)
 
-
-
-
-
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ebf997eb-8010-4c0a-b8f0-d697f5f4c441)
 
 <p align="center">
   Fig.6: Block diagram of Precharge block
@@ -194,7 +190,7 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/abc61968-14ce-47ab-ad96-8b650f1cbcf0)
  
-
+Fig.6 shows the 
 ## Write Driver(WR)
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
@@ -248,6 +244,8 @@ The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading t
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/74c22f23-b053-46b8-8f40-506d7a0cb0db)
+
+Fig.10 shows sense amplifier graph, designers can optimize the sense amplifier's performance, reducing power consumption and improving the overall reliability of the memory cell.Transister with signal **sae** and **saen** is used so that only when saen=1 the circuit works and when saen=0 when the amplifier stores the previous data. So, it is only on in case of read operation. Therefore it is a valuable for the efficient circuit operation.
 
 ## Write Driver(WL):
 
