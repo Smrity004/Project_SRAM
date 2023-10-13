@@ -44,7 +44,7 @@ Let's break down the block diagram of your 16-byte SRAM in 0.18μm CMOS for Low-
 **1. Wordline Decoder:**
 Responsible for selecting the specific wordline (row) within the memory array based on the memory address provided for read or write operations.
 
-**2. Bitline Sense Amplifiers:**
+**2. Sense Amplifiers:**
 Amplify minute voltage differences on the bitlines during read operations, enhancing the reliability of data retrieval.
 
 **3. Write Control(WR):**
