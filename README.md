@@ -215,6 +215,12 @@ In a 16x8 SRAM memory, the decoder acts like a "traffic cop." When you want to f
 Once there, you can either read what's already there or put new information in. 
 The decoder makes sure you get to the right place in the memory every time you want to work with data. Simply, it's like your GPS for the memory grid, guiding you to the right location to find or store data.
 
+<p align="center">
+  Fig.8:Decoder block of SRAM
+</p>
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/254446ef-b7d9-446a-a0fe-e23c30d7c570)
+
 
 # Cadence Simulations
 
@@ -227,7 +233,7 @@ Starting from scratch, designing an SRAM block involves a systematic approach to
 The precharge circuit in an SRAM cell is responsible for ensuring that the bitlines (BL and BLB) are precharged to a certain voltage level before a read or write operation. Precharging is essential to establish a known starting point and to facilitate the accurate reading and writing of data. Let's explore how the precharge circuit precharges an 16x8 SRAM cell array.
 
 <p align="center">
-  Fig.8:Precharge circuit
+  Fig.9:Precharge circuit
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
@@ -238,7 +244,7 @@ A sense amplifier in a 16x8 SRAM cell array is crucial for accurately detecting 
 The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading the data stored in SRAM cells accurately. It detects small voltage differences on the bitlines, amplifies them, and provides a clear and stable output that represents the stored logic state. This operation ensures reliable data access in the SRAM memory array.
 
 <p align="center">
-  Fig.9:Sense Amplifier
+  Fig.10:Sense Amplifier
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/74c22f23-b053-46b8-8f40-506d7a0cb0db)
@@ -252,7 +258,7 @@ Think of Write Enable like a "lock" or a "switch." When this lock is in the "ope
 So, the sense amplifier helps us "read" the data, and the Write Enable signal acts like a "lock" to control whether we can "write" new data into the memory. Together, they ensure that data is stored and retrieved correctly in SRAM.
 
 <p align="center">
-  Fig.10:Write Driver(WL)
+  Fig.11:Write Driver(WL)
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
@@ -260,7 +266,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ## Decoder block
   
 <p align="center">
-  Fig.9:Decoder block
+  Fig.12:Decoder block
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee13df4-bc78-4143-ad9a-78b83bbbf0f9)
@@ -269,7 +275,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ## Sense Amplifier
 
 <p align="center">
-  Fig.11:Sense Amplifier
+  Fig.13:Sense Amplifier
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3a01ed73-df22-4cd9-a0ac-e527e40ef4da)
@@ -277,7 +283,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ## Complete SRAM Schematic 
 
 <p align="center">
-  Fig.12:SRAM Schematic
+  Fig.14:SRAM Schematic
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a2907d0b-c15c-4ba2-bca8-2df955775a7b)
@@ -285,7 +291,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ## TOP Testbench
 
 <p align="center">
-  Fig.13:Testbench
+  Fig.15:Testbench
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3d3b4684-c21b-4739-9a0b-1170c6878278)
