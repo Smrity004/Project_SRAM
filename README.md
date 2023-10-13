@@ -124,7 +124,7 @@ The Fig.3 graph shows the read operation ie.,
 3. When the Q node voltage drops below a certain threshold, it's detected and amplified as a logic "0" data output.
 
 <p align="center">
-  Fig.3: Read block of SRAM
+  Fig.3: Read operation of SRAM
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
@@ -151,7 +151,7 @@ The Fig.4 graph shows how write operation in performed:
 
 
 <p align="center">
-  Fig.4: Write block of SRAM
+  Fig.4: Write operation of SRAM
 </p>
 
 
@@ -192,7 +192,11 @@ The Write Enable (WR) signal is an external control signal that plays a crucial 
 
 Here's a simplified circuit diagram for a basic SRAM cell with a write enable (WR) control. 
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/659c78c4-3deb-4aa0-b4a7-e3fb8642ce9f) 
+<p align="center">
+  Fig.5:Driver(WR) block of SRAM
+</p>
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/135c5909-40e5-4919-9030-235bb8928e17)
 
 ## Decoder block
 
@@ -211,12 +215,20 @@ Starting from scratch, designing an SRAM block involves a systematic approach to
 
 The precharge circuit in an SRAM cell is responsible for ensuring that the bitlines (BL and BLB) are precharged to a certain voltage level before a read or write operation. Precharging is essential to establish a known starting point and to facilitate the accurate reading and writing of data. Let's explore how the precharge circuit precharges an 16x8 SRAM cell array.
 
+<p align="center">
+  Fig.6:Precharge circuit
+</p>
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
 
 ## Sense Amplifier: 
 
 A sense amplifier in a 16x8 SRAM cell array is crucial for accurately detecting and amplifying the voltage differences on the bitlines (BL and BLB) during a read operation. In a 16x8 SRAM cell array, there are 16 rows and 8 columns of SRAM cells. Each SRAM cell has its own bitlines (BL and BLB), and the sense amplifier is used to read the data stored in a specific cell by sensing the voltage difference between these bitlines.
 The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading the data stored in SRAM cells accurately. It detects small voltage differences on the bitlines, amplifies them, and provides a clear and stable output that represents the stored logic state. This operation ensures reliable data access in the SRAM memory array.
+
+<p align="center">
+  Fig.7:Sense Amplifier
+</p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/74c22f23-b053-46b8-8f40-506d7a0cb0db)
 
@@ -228,24 +240,42 @@ Think of Write Enable like a "lock" or a "switch." When this lock is in the "ope
 
 So, the sense amplifier helps us "read" the data, and the Write Enable signal acts like a "lock" to control whether we can "write" new data into the memory. Together, they ensure that data is stored and retrieved correctly in SRAM.
 
+<p align="center">
+  Fig.8:Write Driver(WL)
+</p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
 
 ## Decoder block
   
+<p align="center">
+  Fig.9:Decoder block
+</p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee13df4-bc78-4143-ad9a-78b83bbbf0f9)
 
 
 ## Sense Amplifier
 
+<p align="center">
+  Fig.10:Sense Amplifier
+</p>
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3a01ed73-df22-4cd9-a0ac-e527e40ef4da)
 
 ## Complete SRAM Schematic 
 
+<p align="center">
+  Fig.11:SRAM Schematic
+</p>
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a2907d0b-c15c-4ba2-bca8-2df955775a7b)
 
 ## TOP Testbench
+
+<p align="center">
+  Fig.12:Testbench
+</p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3d3b4684-c21b-4739-9a0b-1170c6878278)
 
