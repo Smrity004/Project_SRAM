@@ -161,7 +161,7 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/2bc39496-04bc-4dc1-98d7-3e48246a34be)
 
 
-## Write enable(WR)
+## Write Driver(WR)
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
 In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WR) control.
