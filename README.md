@@ -4,7 +4,7 @@
 - [Design Description](#design-discription)
 - [Result Analysis](result-analysis)
 - [Conclusion](#conclusion)
-- [Bibliography](bibliography)
+- [Bibliography](#bibliography)
 
 
 # Introduction
@@ -25,7 +25,15 @@ It's commonly used in things like your computer's CPU to make it faster, and it'
 ## Block Diagram
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a5fc4363-b678-40bb-9201-3967325e63ab)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ba5c918a-e5ab-4871-a9c3-9ff7244d2820)
+
+
+<p align="center">
+  Fig.1: Block diagram of SRAM
+</p>
+
+
+
 
 The above figure shows the 16x8 SRAM architecture refers to a specific organization of SRAM cells in an array. 
 
@@ -110,11 +118,14 @@ d. Conversely, if you were reading a "0," , T1 and T5 is on and the bitline volt
 This voltage difference detection and amplification process is what allows SRAM to rapidly and accurately read data without the need for refreshing, making it well-suited for applications that require fast and reliable data retrieval.
 
 
-The below graph shows the read operation ie.,
+The Fig.3 graph shows the read operation ie.,
 1. During the read phase, the Q node (the output) is connected to one of the bitlines (either BL or BLB).
 2. The Q node starts to discharge toward GND (low) through the connected bitline.
 3. When the Q node voltage drops below a certain threshold, it's detected and amplified as a logic "0" data output.
 
+<p align="center">
+  Fig.3: Read block of SRAM
+</p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
@@ -132,12 +143,18 @@ The 'write' operation is controlled by signals. One signal, called 'write-enable
 
 The input circuitry, which processes the data to be written, can be shared among multiple memory cells, as long as only one cell is active or selected at any given moment. This ensures that we write the correct data to the intended location in memory."
 
-The below graph shows how write operation in performed:
+The Fig.4 graph shows how write operation in performed:
 
 1. The Q node is connected to the high bitline (BL or BLB).
 2. The Q node starts to charge toward VDD.
 3. When the Q node voltage reaches a certain threshold (VTH), the given data (let data=1) is confirmed and stored as a logic "1" in the SRAM cell.
-    
+
+
+<p align="center">
+  Fig.4: Write block of SRAM
+</p>
+
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
 
@@ -151,7 +168,13 @@ On the otherhand precharging is the preferred method in SRAM because it provides
 **Secondly**, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
 Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in the precharge circuit to establish a stable voltage reference point, typically at the midpoint between logic high and low. NMOS transistors, known for their fast switching speed, are reserved for read and write access operations, as they excel in rapidly changing the state of the SRAM cell.
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/7916ac7f-9771-4df4-8762-990e6dee2a39)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ee813d2c-9c10-426b-8ad3-79588f6dd4e0)
+
+
+<p align="center">
+  Fig.2: Block diagram of Precharge block
+</p>
+
 
 
 In SRAM, the precharge operation is a vital step that readies the memory cell for data storage and retrieval. During precharge, the bitlines are reset to a stable voltage level, typically the midpoint between logic high and low, ensuring a known starting point for subsequent read and write operations. This step equalizes the SRAM cell's nodes, minimizes noise, and optimizes speed, enhancing the reliability and efficiency of data access in this type of memory.
