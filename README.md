@@ -130,12 +130,11 @@ The 'write' operation is controlled by signals. One signal, called 'write-enable
 
 The input circuitry, which processes the data to be written, can be shared among multiple memory cells, as long as only one cell is active or selected at any given moment. This ensures that we write the correct data to the intended location in memory."
 
-    The below graph shows :
-    
-    1. The Q node is connected to the high bitline (BL or BLB).
-    2. The Q node starts to charge toward VDD.
-    3. When the Q node voltage reaches a certain threshold (VTH), the given data (let data=1) is confirmed and stored as a logic "1" in the SRAM cell.
-      
+The below graph shows how write operation in performed:
+
+1. The Q node is connected to the high bitline (BL or BLB).
+2. The Q node starts to charge toward VDD.
+3. When the Q node voltage reaches a certain threshold (VTH), the given data (let data=1) is confirmed and stored as a logic "1" in the SRAM cell.
     
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
