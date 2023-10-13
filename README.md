@@ -260,6 +260,14 @@ The below graph show the final max and mini delay of the block:
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ebe102f-ecfe-43d5-883d-188a0fac2fde)
 
 
+# Bibliography
+
+   
+     1.   Dr. S. Rout: Acknowledged for guidance in analysis and critical problem-solving.
+
+     2.   Dr. Santanu Sarangi: Acknowledged for providing guidance and direction throughout the project.
+
+     3.   Kang, Sung Mo (by Yusuf Leblebici).
 
 
 
