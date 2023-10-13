@@ -208,8 +208,6 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ce99a59-2680-4768-b960-59d54546bb32)
-
 ## Decoder block
   
 
