@@ -4,6 +4,7 @@
 - [Design Description](#design-discription)
 - [Conclusion](#conclusion)
 - [Result Analysis](result-analysis)
+- [Bibliography](bibliography)
 
 
 # Introduction
@@ -224,20 +225,37 @@ The decoder makes sure you get to the right place in the memory every time you w
 
 # Conclusion
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e164d1d0-088f-4de1-9917-c158eba53246)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee448e3-b9ad-4ce3-bb6e-41e55cb49eee)
+
 
 # Corner Analysis
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/cf82f577-da32-414d-a281-aae4e7ce18db)
+The given address
+add1=15
+add2=15
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9b65fe02-286d-4dff-b7f3-f1793a955373)
+The given data,
+data1=0
+data2=16
 
+The below graph show the write, delay and precharge delay which I got durning my analysis:
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/24653116-6356-41c4-8a25-500914c07aa6)
 
+Given below are the results of the corner analysis which i have checked ie(tm, wp, ws): 
 
+The corner analysis results provide critical insights into how a design or circuit performs under different operating conditions, allowing designers to optimize for a range of real-world scenarios and variations. These analyses help the designers to ensure that the final product functions reliably across the specified temperature ranges, manufacturing process variations, and supply voltage(vdd=1.8V) conditions.
+   
+    
+    TM (Temperature): Represents a range of temperatures from -40°C to 85°C.
+
+    WP (Process): Analyzes the design under varying manufacturing process conditions.
+
+    WS (Supply Voltage): Assesses performance under different supply voltage levels.
+    
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/c621db45-a755-49d1-b85b-ba83cd254500)
 
+The below graph show the final max and mini delay of the block:
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ebe102f-ecfe-43d5-883d-188a0fac2fde)
 
