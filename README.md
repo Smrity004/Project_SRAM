@@ -2,14 +2,14 @@
 - [Introduction](#introduction)
 - [Block Diagram](#block-diagram)
 - [Design Description](#design-discription)
-- [Conclusion](#conclusion)
 - [Result Analysis](result-analysis)
+- [Conclusion](#conclusion)
 - [Bibliography](bibliography)
 
 
 # Introduction
 
-"Unlocking Efficiency: Introducing our 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications!
+Introducing our 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications!
 
  Before diving into the world of SRAM (Static Random-Access Memory), it's essential to understand why we need SRAM when DRAM (Dynamic Random-Access Memory) is already widely used in the world of computer memory. 
  
@@ -142,8 +142,10 @@ The below graph shows how write operation in performed:
 
 
 ## Precharge circuit of SRAM block
-**Firstly**, the question arrises why we predischarge why not predischarge.
-Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as data instability, reduced noise immunity, increased complexity, slower operation, higher power consumption, and incompatibility with established circuit designs.
+
+**Firstly**, the question arrises why we precharge why not predischarge.
+Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as the area increases as we have to use PMOS ,slower operation(PMOS is used-> Area increases -> Capacitance increases), higher power consumption(As area increases).
+
 On the otherhand precharging is the preferred method in SRAM because it provides a stable starting point for memory cells, ensuring data integrity, reliable write and read operations, noise immunity, and overall robust performance.
 
 **Secondly**, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
@@ -162,15 +164,21 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 ## Write enable(WR)
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
-In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WE) control.
-The Write Enable (WE) signal is an external control signal that plays a crucial role in the write operation. It determines whether data can be written into the SRAM cell or not. When the WE signal is set to a logic high (usually 1), it enables the write operation. Conversely, when the WE signal is set to a logic low (usually 0), it disables the write operation, ensuring that data remains unchanged within the SRAM cell.
+In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WR) control.
+The Write Enable (WR) signal is an external control signal that plays a crucial role in the write operation. It determines whether data can be written into the SRAM cell or not. When the WE signal is set to a logic high (usually 1), it enables the write operation. Conversely, when the WE signal is set to a logic low (usually 0), it disables the write operation, ensuring that data remains unchanged within the SRAM cell.
 
-Here's a simplified circuit diagram for a basic SRAM cell with a write enable (WE) control. 
+Here's a simplified circuit diagram for a basic SRAM cell with a write enable (WR) control. 
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/659c78c4-3deb-4aa0-b4a7-e3fb8642ce9f)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/659c78c4-3deb-4aa0-b4a7-e3fb8642ce9f) 
+
+## Decoder block
+
+In a 16x8 SRAM memory, the decoder acts like a "traffic cop." When you want to find or change information stored in a specific part of the memory, you provide an address. The decoder takes that address and figures out exactly which spot in the memory grid you're talking about – which row and which column. It then turns on the right "roads" (wordlines and bitlines) to reach that spot.
+Once there, you can either read what's already there or put new information in. 
+The decoder makes sure you get to the right place in the memory every time you want to work with data. Simply, it's like your GPS for the memory grid, guiding you to the right location to find or store data.
 
 
-# Hand to hand design in Cadence
+# Cadence Simulations
 
 Let's provide a brief description of each block in SRAM architecture in more simplified terms, as if you were designing it by hand:
 When working on a bottom-to-top design approach for an SRAM circuit in Cadence, it means starting with the smallest and most fundamental building blocks and progressively integrating them into a complete system. Here's how you can approach this process:
@@ -180,7 +188,7 @@ Starting from scratch, designing an SRAM block involves a systematic approach to
 
 The precharge circuit in an SRAM cell is responsible for ensuring that the bitlines (BL and BLB) are precharged to a certain voltage level before a read or write operation. Precharging is essential to establish a known starting point and to facilitate the accurate reading and writing of data. Let's explore how the precharge circuit precharges an 16x8 SRAM cell array.
 
-file:///home/nfs2/vlab17/Pictures/pc%3C7:0%3E.png![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
 
 ## Sense Amplifier: 
 
@@ -189,9 +197,9 @@ The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading t
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/74c22f23-b053-46b8-8f40-506d7a0cb0db)
 
-## Write enable(wr):
+## Write Driver(WL):
 
-In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable (WE).
+In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable (WL).
 
 Think of Write Enable like a "lock" or a "switch." When this lock is in the "open" position (like a 1 in digital terms), it allows us to write new data into the memory cell. However, when we switch the lock to the "closed" position (like a 0 in digital terms), it prevents us from changing the data stored in the memory cell. This way, we make sure we don't accidentally overwrite or mess up the information already there.
 
@@ -203,11 +211,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ce99a59-2680-4768-b960-59d54546bb32)
 
 ## Decoder block
-
-In a 16x8 SRAM memory, the decoder acts like a "traffic cop." When you want to find or change information stored in a specific part of the memory, you provide an address. The decoder takes that address and figures out exactly which spot in the memory grid you're talking about – which row and which column. It then turns on the right "roads" (wordlines and bitlines) to reach that spot.
-Once there, you can either read what's already there or put new information in. 
-The decoder makes sure you get to the right place in the memory every time you want to work with data. Simply, it's like your GPS for the memory grid, guiding you to the right location to find or store data.
-
+  
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee13df4-bc78-4143-ad9a-78b83bbbf0f9)
 
@@ -216,7 +220,7 @@ The decoder makes sure you get to the right place in the memory every time you w
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3a01ed73-df22-4cd9-a0ac-e527e40ef4da)
 
-## Schematic 
+## Complete SRAM Schematic 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a2907d0b-c15c-4ba2-bca8-2df955775a7b)
 
@@ -264,11 +268,8 @@ The below graph show the final max and mini delay of the block:
 # Bibliography
 
    
-   1.   Dr. S. Rout: Acknowledged for guidance in analysis and critical problem-solving.
-
-   2.   Dr. Santanu Sarangi: Acknowledged for providing guidance and direction throughout the project.
-
-   3.   Kang, Sung Mo (by Yusuf Leblebici).
+   1. Kang, Sung Mo (by Yusuf Leblebici).
+   2. Google.com
 
 
 
