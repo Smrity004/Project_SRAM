@@ -294,9 +294,6 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/3d3b4684-c21b-4739-9a0b-1170c6878278)
 
-# Conclusion
-
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee448e3-b9ad-4ce3-bb6e-41e55cb49eee)
 
 
 # Corner Analysis
@@ -329,6 +326,21 @@ The corner analysis results provide critical insights into how a design or circu
 The below graph show the final max and mini delay of the block:
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/1ebe102f-ecfe-43d5-883d-188a0fac2fde)
+
+
+
+# Conclusion
+
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee448e3-b9ad-4ce3-bb6e-41e55cb49eee)
+
+**Time period and Frequency of the SRAM BLOCK**
+
+
+| Time Period   | Frequency     |
+| ------------- | ------------- |
+|   60 ns       | 16.66 MHz     |
+
+
 
 
 # Bibliography
