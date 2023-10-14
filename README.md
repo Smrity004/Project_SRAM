@@ -1,4 +1,20 @@
-# Table of Content
+# 16 byte SRAM in 0.18um CMOS for Low-Power IoT Applications
+
+## Specifications of SRAM
+
+Supply Voltage | Time Period   | Frequency     |
+| -------------| ------------- | ------------- |
+| 1.8V         |   60 ns       | 16.66 MHz     |
+
+
+## Tool Used: Cadence
+
+Schematic       | Simulation    | 
+| ------------- | ------------- | 
+| Virtuoso      | Spectre       |              
+  
+
+## Table of Content
 - [Introduction](#introduction)
 - [Block Diagram](#block-diagram)
 - [Design Description](#design-discription)
@@ -7,7 +23,7 @@
 - [Bibliography](#bibliography)
 
 
-# Introduction
+## Introduction
 
 Introducing our 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications!
 
@@ -22,7 +38,7 @@ It helps your devices work quickly and efficiently by storing and retrieving inf
 It's commonly used in things like your computer's CPU to make it faster, and it's also used in various other electronic gadgets to speed up their operations.
 
 
-## Block Diagram
+### Block Diagram
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ba5c918a-e5ab-4871-a9c3-9ff7244d2820)
@@ -69,14 +85,14 @@ Here, the block of my SRAM Project.
 
 
 
-## DESIGN DISCRIPTION
+### DESIGN DISCRIPTION
 
 **Let's delve into the detailed study of the different blocks involved in your 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology.**
 
 The Read Control block is crucial for balancing performance and power efficiency in SRAM memory, ensuring that read operations are both fast and energy-efficient, which is particularly important for IoT devices that need to conserve power while maintaining responsive data access.
 
 
-## 6T-SRAM
+### 6T-SRAM
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/6eb63480-4436-4701-b81d-f2636d98bf22)
 
 The above circuit show the read circuit of SRAM.
@@ -105,7 +121,7 @@ Sizing of Transister T3 and T5
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/e359ac41-51b7-4d1a-aac5-7b0cbeda43f0)
 
 
-## Read Operation
+### Read Operation
    During the read phase:
 
 a. A specific wordline is activated, which enables access to a particular SRAM cell in the array.
@@ -130,7 +146,7 @@ The Fig.3 graph shows the read operation ie.,
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/26a29df6-1278-4fb6-a7d9-921a637a5b30)
 
 
-## Write Operation
+### Write Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9de521a3-b568-4722-8e71-6565dd5c256d)
 
 "When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
@@ -158,7 +174,7 @@ The Fig.4 graph shows how write operation in performed:
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
 
-## Precharge circuit of SRAM block
+### Precharge circuit of SRAM block
 
 **Firstly**, the question arrises why we precharge why not predischarge.
 Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as the area increases as we have to use PMOS ,slower operation(PMOS is used-> Area increases -> Capacitance increases), higher power consumption(As area increases).
@@ -179,7 +195,7 @@ Instead, PMOS (p-channel metal-oxide-semiconductor) transistors are employed in 
 
 In SRAM, the precharge operation is a vital step that readies the memory cell for data storage and retrieval. During precharge, the bitlines are reset to a stable voltage level, typically the midpoint between logic high and low, ensuring a known starting point for subsequent read and write operations. This step equalizes the SRAM cell's nodes, minimizes noise, and optimizes speed, enhancing the reliability and efficiency of data access in this type of memory.
 
-## Sense Amplifier
+### Sense Amplifier
 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ebf997eb-8010-4c0a-b8f0-d697f5f4c441)
@@ -191,7 +207,7 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/abc61968-14ce-47ab-ad96-8b650f1cbcf0)
  
 Fig.6 shows the 
-## Write Driver(WR)
+### Write Driver(WR)
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
 In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WR) control.
@@ -205,7 +221,7 @@ Here's a simplified circuit diagram for a basic SRAM cell with a write enable (W
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/135c5909-40e5-4919-9030-235bb8928e17)
 
-## Decoder block
+### Decoder block
 
 In a 16x8 SRAM memory, the decoder acts like a "traffic cop." When you want to find or change information stored in a specific part of the memory, you provide an address. The decoder takes that address and figures out exactly which spot in the memory grid you're talking about – which row and which column. It then turns on the right "roads" (wordlines and bitlines) to reach that spot.
 Once there, you can either read what's already there or put new information in. 
@@ -218,13 +234,13 @@ The decoder makes sure you get to the right place in the memory every time you w
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/254446ef-b7d9-446a-a0fe-e23c30d7c570)
 
 
-# Cadence Simulations
+## Cadence Simulations
 
 Let's provide a brief description of each block in SRAM architecture in more simplified terms, as if you were designing it by hand:
 When working on a bottom-to-top design approach for an SRAM circuit in Cadence, it means starting with the smallest and most fundamental building blocks and progressively integrating them into a complete system. Here's how you can approach this process:
 Starting from scratch, designing an SRAM block involves a systematic approach to create a reliable and efficient memory unit. Here's a step-by-step explanation of how you might begin and why each step is necessary:
 
-## Precharge circuit: 
+### Precharge circuit: 
 
 The precharge circuit in an SRAM cell is responsible for ensuring that the bitlines (BL and BLB) are precharged to a certain voltage level before a read or write operation. Precharging is essential to establish a known starting point and to facilitate the accurate reading and writing of data. Let's explore how the precharge circuit precharges an 16x8 SRAM cell array.
 
@@ -234,7 +250,7 @@ The precharge circuit in an SRAM cell is responsible for ensuring that the bitli
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/798266af-adcd-4353-b1a5-6356fa9af1b0)
 
-## Sense Amplifier: 
+### Sense Amplifier: 
 
 A sense amplifier in a 16x8 SRAM cell array is crucial for accurately detecting and amplifying the voltage differences on the bitlines (BL and BLB) during a read operation. In a 16x8 SRAM cell array, there are 16 rows and 8 columns of SRAM cells. Each SRAM cell has its own bitlines (BL and BLB), and the sense amplifier is used to read the data stored in a specific cell by sensing the voltage difference between these bitlines.
 The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading the data stored in SRAM cells accurately. It detects small voltage differences on the bitlines, amplifies them, and provides a clear and stable output that represents the stored logic state. This operation ensures reliable data access in the SRAM memory array.
@@ -247,7 +263,7 @@ The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading t
 
 Fig.10 shows sense amplifier graph, designers can optimize the sense amplifier's performance, reducing power consumption and improving the overall reliability of the memory cell.Transister with signal **sae** and **saen** is used so that only when saen=1 the circuit works and when saen=0 when the amplifier stores the previous data. So, it is only on in case of read operation. Therefore it is a valuable for the efficient circuit operation.
 
-## Write Driver(WL):
+### Write Driver(WL):
 
 In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable (WL).
 
@@ -261,7 +277,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
 
-## Decoder block
+### Decoder block
   
 <p align="center">
   Fig.12:Decoder block
@@ -270,7 +286,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee13df4-bc78-4143-ad9a-78b83bbbf0f9)
 
 
-## Sense Amplifier
+### Sense Amplifier
 
 <p align="center">
   Fig.13:Sense Amplifier
@@ -296,7 +312,7 @@ So, the sense amplifier helps us "read" the data, and the Write Enable signal ac
 
 
 
-# Corner Analysis
+## Corner Analysis
 
 The given address
 add1=15
@@ -329,21 +345,14 @@ The below graph show the final max and mini delay of the block:
 
 
 
-# Conclusion
+## Conclusion
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/0ee448e3-b9ad-4ce3-bb6e-41e55cb49eee)
 
-**Time period and Frequency of the SRAM BLOCK**
-
-
-| Time Period   | Frequency     |
-| ------------- | ------------- |
-|   60 ns       | 16.66 MHz     |
 
 
 
-
-# Bibliography
+## Bibliography
 
    
    1. Kang, Sung Mo (by Yusuf Leblebici).
