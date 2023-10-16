@@ -126,7 +126,7 @@ Sizing of Transister T3 and T5
 
 a. A specific wordline is activated, which enables access to a particular SRAM cell in the array.
 
-b. When you read a "1," it means that one of the transistors (e.g., M4 or M6) in the SRAM cell is turned on, which connects one of the bitlines to the cell. This, in turn, causes the voltage on the bitline to drop slightly.
+b. When you read a "1," it means that one of the transistors (e.g., T4 or T6) in the SRAM cell is turned on, which connects one of the bitlines to the cell. This, in turn, causes the voltage on the bitline to drop slightly.
 
 c. The data-read circuitry detects this small voltage difference and amplifies it, effectively converting it into a logic "1" data output.
 
@@ -151,9 +151,9 @@ The Fig.3 graph shows the read operation ie.,
 
 "When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
 
-In the circuit, we use special transistors called nMOS transistors, specifically M1 and M2, to bring down the voltage in the memory cells. There's also another transistor, M3, which completes the connection to the ground. Importantly, M3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
+In the circuit, we use special transistors called nMOS transistors, specifically T1 and T2, to bring down the voltage in the memory cells. There's also another transistor, T3, which completes the connection to the ground. Importantly, T3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
 
-The transistors that bring down the voltage in the memory cells (M1 and M2) need to be big enough (meaning they have a sufficiently large size) to ensure the voltage gets very close to 0 V during a 'write' operation.
+The transistors that bring down the voltage in the memory cells (T1 and T2) need to be big enough (meaning they have a sufficiently large size) to ensure the voltage gets very close to 0 V during a 'write' operation.
 
 The 'write' operation is controlled by signals. One signal, called 'write-enable,' tells the circuit when it's time to write data. The actual data we want to write is called 'DATA.' Together, these signals create the control signals that determine when and where the write operation happens.
 
