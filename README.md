@@ -207,8 +207,8 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 
 ### Sense Amplifier
 
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/7ea2cb60-c9eb-4764-9ac5-51835f91d942)
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/ebf997eb-8010-4c0a-b8f0-d697f5f4c441)
 
 <p align="center">
   Fig.6: Block diagram of Precharge block
