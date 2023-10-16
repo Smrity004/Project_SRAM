@@ -186,7 +186,7 @@ Here, is the table which show why I did Precharging,
 | T5           | 0.25u/0.18u      |  2.5u/0.18u         |
 | T3           | 0.568u/0.18u     |  2.5u/0.18u         |
 | T1           | 0.294u/0.18u     |  0.25u/0.18u        |
-| Total Area( in sq.units   | 0.945     |  0.2          |
+| Total Area( in sq.units)   | 0.945     |  0.2          |
 
 Therefore we can see the area of PMOS is **4.47** times more than PMOS which is approximately **5 times** more than NMOS.
 So, we go more Precharging ,it is the preferred method in SRAM because it provides a stable starting point for memory cells, ensuring data integrity, reliable write and read operations, noise immunity, and overall robust performance.
