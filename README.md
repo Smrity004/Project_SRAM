@@ -207,7 +207,8 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 
 ### Sense Amplifier
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/7ea2cb60-c9eb-4764-9ac5-51835f91d942)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/40251edb-a0e5-4c16-8bef-1ea968cad683)
+
 
 
 <p align="center">
