@@ -229,7 +229,8 @@ Here's a simplified circuit diagram for a basic SRAM cell with a write enable (W
   Fig.7:Driver(WR) block of SRAM
 </p>
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/135c5909-40e5-4919-9030-235bb8928e17)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9be6b268-20e2-47c0-b3e2-5de570b2bf73)
+
 
 ### Decoder block
 
