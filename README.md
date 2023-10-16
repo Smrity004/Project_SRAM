@@ -179,6 +179,13 @@ The Fig.4 graph shows how write operation in performed:
 **Firstly**, the question arrises why we precharge why not predischarge.
 Predischarge in digital circuits, especially in memory elements like SRAM, is rarely used due to the disadvantages it introduces, such as the area increases as we have to use PMOS ,slower operation(PMOS is used-> Area increases -> Capacitance increases), higher power consumption(As area increases).
 
+
+ Transister    | PMOS(Precharge)  | NMOS(Predischarge)  |
+| -------------| -------------    | -------------       |
+| T5           | 0.25u/0.18u      |  2.5u/0.18u         |
+| T3           | 0.568u/0.18u     |  2.5u/0.18u         |
+| T1           | 0.294u/0.18u     |  0.25u/0.18u        |
+
 On the otherhand precharging is the preferred method in SRAM because it provides a stable starting point for memory cells, ensuring data integrity, reliable write and read operations, noise immunity, and overall robust performance.
 
 **Secondly**, in  SRAM (Static Random-Access Memory) cells, NMOS (n-channel metal-oxide-semiconductor) transistors are not used for precharge due to their inability to efficiently pull bitlines to the required high voltage level (VDD). 
