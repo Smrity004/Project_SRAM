@@ -41,7 +41,7 @@ It's commonly used in things like your computer's CPU to make it faster, and it'
 ### Block Diagram
 Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
 
-![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/5c421c2a-43ba-41e0-a97c-1dd920153398)
+![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/dced5b0c-07b9-409b-b603-8dba5118cfed)
 
 <p align="center">
   Fig.1: Block diagram of SRAM
