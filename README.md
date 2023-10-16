@@ -151,7 +151,7 @@ The Fig.3 graph shows the read operation ie.,
 
 "When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
 
-In the circuit, we use special transistors called nMOS transistors, specifically T1 and T2, to bring down the voltage in the memory cells. There's also another transistor, T3, which completes the connection to the ground. Importantly, T3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
+In the circuit, we use nMOS transistors, specifically T1 and T2, to bring down the voltage in the memory cells. There's also another transistor, T3, which completes the connection to the ground. Importantly, T3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
 
 The transistors that bring down the voltage in the memory cells (T1 and T2) need to be big enough (meaning they have a sufficiently large size) to ensure the voltage gets very close to 0 V during a 'write' operation.
 
