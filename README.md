@@ -331,8 +331,8 @@ add1=15
 add2=15
 
 The given data,
-data1=0
-data2=16
+data1= 0
+data2= 6
 
 The below graph show the write, delay and precharge delay which I got durning my analysis:
 
