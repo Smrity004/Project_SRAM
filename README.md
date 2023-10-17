@@ -29,16 +29,16 @@ Introducing our 16-byte SRAM in 0.18μm CMOS for Low-Power IoT Applications!
 
  Before diving into the world of SRAM (Static Random-Access Memory), it's essential to understand why we need SRAM when DRAM (Dynamic Random-Access Memory) is already widely used in the world of computer memory. 
  
- DRAM is a smaller but slower whiteboard, it consists of a single transistor and a capacitor so,results in lower power consumption.
+ DRAM is a smaller but slower whiteboard( this is because to read the data, the charge in the capacitor needs to be sensed, which is a relatively slow process), it consists of a single transistor and a capacitor so,results in lower power consumption. It can store a lot of information, but it needs to refresh the content regularly, like rewriting things on the whiteboard so they don't fade away. It's a volatile memory, which means it loses its data when the power is turned off. DRAM is like a bigger storage space that takes a bit more time to find and use information.
 
- It can store a lot of information, but it needs to refresh the content regularly, like rewriting things on the whiteboard so they don't fade away. It's a volatile memory, which means it loses its data when the power is turned off. DRAM is like a bigger storage space that takes a bit more time to find and use information.
+
 SRAM (Static Random-Access Memory) is a type of computer memory that's like a super-fast and easily accessible storage space for data that our computer or electronic devices need right now. 
-It helps your devices work quickly and efficiently by storing and retrieving information rapidly. 
-It's commonly used in things like your computer's CPU to make it faster, and it's also used in various other electronic gadgets to speed up their operations.
+It helps your devices work quickly and efficiently by storing and retrieving information rapidly. Each SRAM cell typically uses multiple transistors (usually six) to store a single bit of data. The data is stored **as a flip-flop circuit**, which allows for very fast access times. Since SRAM cells don't rely on capacitors and charge, there's no need for refreshing, and data can be read quickly.
+It's commonly used in things like our computer's CPU to make it faster, and it's also used in various other electronic gadgets to speed up their operations.
 
 
 ### Block Diagram
-Here's the block diagram for a 16-byte SRAM (Static Random-Access Memory) designed for low-power IoT (Internet of Things) applications in a 0.18μm CMOS (Complementary Metal-Oxide-Semiconductor) technology involves illustrating the major functional blocks and their interconnections. 
+Here's the block diagram for a 16-byte SRAM designed for low-power IoT applications in a 0.18μm CMOS technology involves illustrating the major functional blocks and their interconnections. 
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/472ecf1d-814a-43af-92d9-ae978928e937)
 
@@ -78,9 +78,6 @@ Responsible for overseeing read operations, assisting in the retrieval of data f
 
 **5. Address Decoder:**
 Takes the memory address as input and decodes it to select the appropriate row and column in the memory array.
-
-Here, the block of my SRAM Project.
-
 
 
 
@@ -148,7 +145,7 @@ The Fig.3 graph shows the read operation ie.,
 ### Write Operation
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9de521a3-b568-4722-8e71-6565dd5c256d)
 
-"When we want to 'write' data into SRAM (a type of computer memory), we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
+When we want to 'write' data into SRAM (a type of computer memory) , we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
 
 In the circuit, we use nMOS transistors, specifically T1 and T2, to bring down the voltage in the memory cells. There's also another transistor, T3, which completes the connection to the ground. Importantly, T3 only turns on when we want to write data to a specific location in the memory, determined by the 'column address.'
 
@@ -217,16 +214,16 @@ In SRAM, the precharge operation is a vital step that readies the memory cell fo
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/abc61968-14ce-47ab-ad96-8b650f1cbcf0)
  
 Fig.6 shows the 
-### Write Driver(WR)
+### Write Driver
 
 Since in my SRAM architecture Sense Amplifier is always ON, here a am trying to elaborate the role of write enable in sram block.
-In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, you typically need a separate circuit for write enable (WR) control.
-The Write Enable (WR) signal is an external control signal that plays a crucial role in the write operation. It determines whether data can be written into the SRAM cell or not. When the WE signal is set to a logic high (usually 1), it enables the write operation. Conversely, when the WE signal is set to a logic low (usually 0), it disables the write operation, ensuring that data remains unchanged within the SRAM cell.
+In SRAM architecture, the sense amplifier is indeed a crucial component. It's used for reading the stored data in the SRAM cells. However, to write data into SRAM, we typically need a separate circuit of write driver control.
+The Write Driver signal is an external control signal that plays a crucial role in the write operation, it is used to give a data to the sram,  what we need to write. When it is set to a logic high, one is written to SRAM and when zero in given than 0 is given to the SRAM. Here, I have used a switch in which when RD is 1 and RW is 0 then data is passed to BL and datab is passed to BLB.
 
-Here's a simplified circuit diagram for a basic SRAM cell with a write enable (WR) control. 
+Here's a simplified circuit diagram for a basic SRAM cell with a write enable control. 
 
 <p align="center">
-  Fig.7:Driver(WR) block of SRAM
+  Fig.7:Driver block of SRAM
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9be6b268-20e2-47c0-b3e2-5de570b2bf73)
@@ -274,16 +271,16 @@ The sense amplifier in a 16x8 SRAM cell array plays a critical role in reading t
 
 Fig.10 shows sense amplifier graph, designers can optimize the sense amplifier's performance, reducing power consumption and improving the overall reliability of the memory cell.Transister with signal **sae** and **saen** is used so that only when saen=1 the circuit works and when saen=0 when the amplifier stores the previous data. So, it is only on in case of read operation. Therefore it is a valuable for the efficient circuit operation.
 
-### Write Driver(WL):
+### Write Enable:
 
-In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable (WL).
+In SRAM (Static Random-Access Memory) design, the sense amplifier is like the "reader" that helps us figure out what's stored in the memory cells. But when we want to put new information into these cells, we need a special signal called Write Enable.
 
 Think of Write Enable like a "lock" or a "switch." When this lock is in the "open" position (like a 1 in digital terms), it allows us to write new data into the memory cell. However, when we switch the lock to the "closed" position (like a 0 in digital terms), it prevents us from changing the data stored in the memory cell. This way, we make sure we don't accidentally overwrite or mess up the information already there.
 
 So, the sense amplifier helps us "read" the data, and the Write Enable signal acts like a "lock" to control whether we can "write" new data into the memory. Together, they ensure that data is stored and retrieved correctly in SRAM.
 
 <p align="center">
-  Fig.11:Write Driver(WL)
+  Fig.11:Write Enable
 </p>
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/a743c3a6-9c44-4d10-9277-c2935238a808)
