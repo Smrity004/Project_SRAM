@@ -365,7 +365,10 @@ The below graph show the final max and mini delay of the block:
 
 To conclude your SRAM project effectively, start by summarizing the key points and achievements of your project.
 In our 16x8 SRAM project, the inclusion of the sense amplifier greatly improved the efficiency of read operations, ensuring accurate data detection. 
-We consciously chose not to implement a column decoder due to the small size of our SRAM array, making it more practical to directly address and access the columns. With a frequency of operation set at 16MHz, we achieved a balance between speed and power efficiency. 
+
+We consciously chose not to implement a column decoder due to the small size of our SRAM array, making it more practical to directly address and access the columns. 
+
+With a frequency of operation set at 16MHz, we achieved a balance between speed and power efficiency. 
 
 
 ## Bibliography
