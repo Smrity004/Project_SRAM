@@ -368,7 +368,8 @@ In our 16x8 SRAM project, the inclusion of the sense amplifier greatly improved 
 
 We consciously chose not to implement a column decoder due to the small size of our SRAM array, making it more practical to directly address and access the columns. 
 
-With a frequency of operation set at 16MHz, we achieved a balance between speed and power efficiency. 
+With a frequency of operation set at 16MHz. The symphony of our efforts is best illustrated by our achievement of 367.92 micro-watts of balanced power. 
+This project is not just a technical feat but a testament to our dedication to excellence.
 
 
 ## Bibliography
