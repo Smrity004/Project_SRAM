@@ -143,7 +143,14 @@ The Fig.3 graph shows the read operation ie.,
 
 
 ### Write Operation
+
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/9de521a3-b568-4722-8e71-6565dd5c256d)
+
+
+<p align="center">
+  Fig.4: Write operation of SRAM
+</p>
+
 
 When we want to 'write' data into SRAM (a type of computer memory) , we need to make sure that the memory cells store a 'logic-low' value, which is typically represented by 0. To do this, we need a way to connect the memory cells to the ground (0 V) selectively when we want to write. This is where a special circuit comes into play.
 
@@ -161,11 +168,7 @@ The Fig.4 graph shows how write operation in performed:
 2. The Q node starts to charge toward VDD.
 3. When the Q node voltage reaches a certain threshold (VTH), the given data (let data=1) is confirmed and stored as a logic "1" in the SRAM cell.
 
-
-<p align="center">
-  Fig.4: Write operation of SRAM
-</p>
-
+The graph below shows the write operation.
 
 ![image](https://github.com/Smrity004/Project_SRAM/assets/102158117/54bf4897-9b05-4cf7-9a43-f42f55ec547a)
 
